@@ -176,6 +176,7 @@ const API_URL = "https://script.google.com/macros/s/AKfycbx4akundr090agOw7S1pLIC
  function SalvarMensagem() { 
     const mensagem = document.getElementById("MensagemCampo").value; 
     if (!mensagem.trim()) return; 
-    fetch(API_URL, { method: "POST", body: JSON.stringify({ mensagem: mensagem }) }).then(() => { document.getElementById("MensagemCampo").value = ""; atualizarLista(); }); } function atualizarLista() { fetch(API_URL) .then(res => res.json()) .then(data => { const ul = document.getElementById("mensagensUl"); ul.innerHTML = ""; data.forEach(item => { const li = document.createElement("li"); li.textContent = item.mensagem + " - " + item.data; ul.appendChild(li); }); }); } 
+    fetch(API_URL, { method: "POST", body: JSON.stringify({ mensagem: mensagem }) }).then(() => { document.getElementById("MensagemCampo").value = ""; atualizarLista(); }); } 
+    function atualizarLista() { fetch(API_URL) .then(res => res.json()) .then(data => { const ul = document.getElementById("mensagensUl"); ul.innerHTML = ""; data.forEach(item => { const li = document.createElement("li"); li.textContent = item.mensagem; }); }); } 
 window.onload = atualizarLista;
 // Atualiza a lista ao carregar a página window.onload = atualizarLista;
