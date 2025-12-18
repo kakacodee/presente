@@ -172,3 +172,21 @@ document.addEventListener('keydown', function(event) {
 });
 
 
+function SalvarMensagem(){ 
+    const mensagem = document.getElementById("MensagemCampo").value; 
+    const novaMensagem = mensagem.trim(); if(!novaMensagem) return; 
+    let mensagensList = JSON.parse(localStorage.getItem("MensagensSalvas")) || []; 
+    mensagensList.push(novaMensagem); 
+    localStorage.setItem("MensagensSalvas", JSON.stringify(mensagensList));
+    document.getElementById("MensagemCampo").value = ""; 
+    atualizarLista(); 
+} 
+function atualizarLista() { 
+    const mensagens = JSON.parse(localStorage.getItem("MensagensSalvas")) || []; 
+    const ul = document.getElementById("mensagensUl"); ul.innerHTML = ""; 
+    mensagens.forEach((msg) => { const li = document.createElement("li"); 
+        li.textContent = msg; ul.appendChild(li); 
+    });
+ } // Atualiza a lista ao carregar a página window.onload = atualizarLista;
+ window.onload = atualizarLista();
+// Atualiza a lista ao carregar a página window.onload = atualizarLista;

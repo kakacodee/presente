@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="galeria.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title></title>
+  <title>Presente</title>
 </head>
 <body>
   <main>
@@ -76,7 +76,14 @@
     </div>
     
   </div>
-
+   <div class="Mensagem" id="Mensagem"> 
+    <h1 class="galeria-titulo">Deixe uma mensagem/lembrete pra mim!</h1> 
+    <input type="text" id="MensagemCampo" placeholder="Escreva sua mensagem aqui..."/> 
+    <button onclick="SalvarMensagem()" class="btnMensagem">Salvar Mensagem</button> 
+    <div id="listaMensagens" class="listaMensagens"> 
+      <ul id="mensagensUl"></ul> 
+    </div> 
+  </div>
   </main>
   <script src="script.js"></script>
   
