@@ -292,13 +292,7 @@ p {
   }
 
   /* TEXTO – remove posicionamento forçado */
-  .textinhodiv {
-    position: static !important;
-    display: block !important;
-    margin: 1rem auto 0 auto !important;
-    padding: 0 !important;
-    width: 100% !important;
-  }
+  
 
   .textinho {
     width: 90% !important;
