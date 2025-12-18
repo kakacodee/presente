@@ -1,0 +1,317 @@
+html{
+    background-color: rgb(69, 12, 94);
+}
+.cor{
+    width: 40%;
+    justify-items: center;
+    justify-content:center;
+    align-items: center;
+    transition: ease-in-out 0.5s;
+}
+.cor:hover{
+    margin-top: -1.8rem;
+    width: 60%;
+}
+.modal-fundo {
+    background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(10px);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.alerta{
+    margin-top: 2vh;
+    width: 64px;
+    height:64px;
+}
+.container-img {
+  margin-top: 14vh;
+    display: flex;
+    justify-content: center;
+    border:  solid #fff;
+    margin: 1%;
+    overflow: hidden;
+    border-radius: 50px;
+}
+.img1{
+    width: 100%;
+    height:95%;
+}
+.modal-caixa {
+  background:white;
+  padding: 25px 30px;
+  width: 350px;
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+  animation: modalFade .3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+}
+
+.modal-fechar {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 28px;
+  height: 28px;
+  background: #ff4d4d;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes modalFade {
+  from { opacity: 0; transform: scale(.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+#caixa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+#area{
+    background-color: #56A6C1;
+    width: 550px;
+    height: 390px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 15px;
+    box-shadow: 1px 3px 3px 2px rgba(1, 1, 1, .5);
+}
+.modalErro{
+    color:#ff4d4d; 
+    font-weight:light;
+    font-size:30px; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.modalTry{
+    color: rgb(69, 12, 94); 
+    font-weight:bold;
+    font-size:25px; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.button {
+    display: inline-block;
+    margin: 12px 8px;
+    cursor: pointer;
+    padding: 12px !important;
+    background: rgb(171, 131, 189) !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 50%;
+    width: fit-content;
+}
+
+.buttons-container {
+  background-color:rgb(171, 131, 189);
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  opacity: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.button img {
+    width: 64px;
+    height: auto;
+    background: none;
+}
+.button img:hover {
+    width: 48px;
+    transition: width 0.3s ease;
+    filter: brightness(0.9);
+    
+    height: auto;
+}
+p {
+    line-height: 1.5;
+    text-align: center;
+    padding: 0 10px; /* respira nas laterais */
+}
+/* Ajustes para telas maiores */
+@media (min-width: 500px) {
+    .title { font-size: 40px; }
+    .subtitle { font-size: 20px; }
+    .subtitle2 { font-size: 22px; }
+    .subtitle3 { font-size: 18px; 
+    margin-top: -0.8rem;
+    margin-bottom: 3rem;
+    }
+   
+    .button img {
+        width: 80px;
+    }
+}
+
+/* Responsividade para mobile médio (375px a 430px) */
+@media (max-width: 500px) {
+    .title { font-size: 1.5rem; }
+    .subtitle { font-size: 15px; }
+    .subtitle2 { font-size: 16px; }
+    .subtitle3 { font-size: 13px;
+    margin-top: -0.8rem;
+    margin-bottom: 3rem; 
+    }
+    .gif { max-width: 170px; }
+    .button img { width: 40px; }
+    body { padding: 8px; }
+}
+.slideshow-wrapper {
+  max-width: 600px;
+  width: 85%;
+  margin: 6rem 0 0 2rem;
+  margin-left: 10rem;
+  overflow: hidden;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+
+.slideshow {
+  display: flex;
+  transition: transform 0.45s ease;
+}
+
+.slide {
+  min-width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: flex;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+
+#imge {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+
+}
+@media (max-width: 500px) {
+  .slide img {
+    max-height: 50vh;
+    border-radius: 14px;
+  }
+}
+
+.textinhodiv {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    margin-top: -39rem;
+    margin-left: 56rem;
+}
+
+.textinho {
+    color: #fff;
+    font-size: 28px;
+    line-height: 2.1;
+    margin: 0;
+    padding: 50px;
+    background: rgba(171, 131, 189, 0.2);
+    border-left: 6px solid rgb(171, 131, 189);
+    border-radius: 8px;
+    text-align: left;
+    font-family: 'Georgia', serif;
+    font-weight: 300;
+    width: 45rem;
+}
+
+.textinho em {
+    color: #ff69b4;
+    font-style: italic;
+    font-weight: bold;
+}
+.song-text {
+  color: #fff;
+  font-size: 18px;
+  margin: 10px 5px 0 24px;
+  display: none; /* oculto até a música tocar */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  position: absolute;
+}
+ @media (max-width: 500px) {
+
+  /* RESET GERAL */
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* SLIDESHOW */
+  .slideshow-wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin: 1.5rem auto 0 auto !important;
+    margin-left: 0 !important;
+    border-radius: 14px;
+  }
+
+  .slideshow {
+    width: 100%;
+  }
+
+  .slide {
+    min-width: 100%;
+  }
+
+  .slide img,
+  #imge {
+    width: 100%;
+    height: 45vh !important;
+    object-fit: cover;
+    border-radius: 14px;
+  }
+
+  /* TEXTO – remove posicionamento forçado */
+  .textinhodiv {
+    position: static !important;
+    display: block !important;
+    margin: 1rem auto 0 auto !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  .textinho {
+    width: 90% !important;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 1.6;
+    padding: 18px;
+    border-left: 4px solid rgb(171, 131, 189);
+  }
+
+  /* TEXTO DA MÚSICA */
+  .song-text {
+    position: relative !important;
+    margin: 10px auto 0 auto !important;
+    text-align: center;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="galeria.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title></title>
+</head>
+<body>
+  <main>
+  <h1 class="galeria-titulo">Rádio eu e tu FM</h2>
+    <!--<img style="display: flex; width:100%; height: 100%; z-index: 0;" src="img/ptrn.jpg" alt="">-->
+    <div id="modalAuto" class="modal-fundo">
+      <div class="modal-caixa">
+        <span class="modal-fechar" onclick="fecharModal()">&times;</span>
+        <img class="alerta" src="img/OIP.webp" alt="alerta">
+        <h2 class="modalErro">Para o amor da minha vida</h2>
+        <p class="modalTry">Te amo!!!</p>
+      </div>
+    </div>
+    <!--<center><img class="cor" src="img/elemento-artesanal-de-papel-coracao-vermelho-removebg-preview.png" alt=""></center>-->
+
+    
+
+<div class="slideshow-wrapper">
+  <div class="slideshow" id="slideshow">
+    <img id="imge" src="img/img1.jpeg" alt="Foto">
+  </div>
+  <div class="buttons-container">
+    <button class="button" onclick="prevMusic()"><img src="img/next (2).png" alt="Anterior"></button>
+    <button class="button" onclick="Music()"><img id="play" src="img/play-button__3_-removebg-preview.png" alt=""></button>
+    <button class="button" onclick="nextMusic()"><img src="img/next (1).png" alt="Próxima"></button>
+  </div>
+  <p id="songText" class="song-text"></p>
+    <audio id="bgm" loop>
+  <source src="music/aliancaor.mp3" type="audio/mpeg">
+</audio>
+</div>
+<div class="textinhodiv">
+ <p class="textinho"><em>A viagem</em> que foi te conhecer, se tornou a minha favorita! <em>A melhor parte</em> é que ela foi só de ida, para crescermos e caminharmos juntos nessa jornada.
+  Talvez no começo, eu tivesse me questionado dessa decisão, porém, <em>Pela luz dos olhos teus</em>, eu tive certeza que tu é a mulher que eu deveria cuidar e 
+  colocar uma <em>Aliança</em> no dedo! E como numa noite inesquecível no <em>Whisky a Go Go</em>, percebi que a nossa história tem a trilha perfeita para durar a vida inteira.</p>
+  </div>
+
+  <!-- Modal Pop-up para Galeria -->
+  <div id="galeriaModal" class="galeria-modal">
+    <div class="galeria-conteudo">
+      <span class="galeria-fechar" onclick="fecharGaleria()">&times;</span>
+      <img id="galeriaImg" src="" alt="Foto Galeria">
+      <div class="galeria-navegacao">
+        <button class="galeria-btn" onclick="galeriaAnterior()"><img src="img/next (2).png" alt="Anterior"></button>
+        <button class="galeria-btn" onclick="galeriaProxima()"><img src="img/next (1).png" alt="Próxima"></button>
+      </div>
+      <p id="galeriaTexto" class="galeria-texto"></p>
+    </div>
+  </div>
+
+  <!-- Galeria de Imagens (6-17) -->
+  <div class="galeria-container">
+    <h1 class="galeria-titulo">Nossos Momentos</h2>
+    <div class="galeria-grid">
+      <img src="img/img6.jpeg" alt="Foto 6" onclick="abrirGaleria(0)" class="galeria-thumb">
+      <img src="img/img7.jpeg" alt="Foto 7" onclick="abrirGaleria(1)" class="galeria-thumb">
+      <img src="img/img8.jpeg" alt="Foto 8" onclick="abrirGaleria(2)" class="galeria-thumb">
+      <img src="img/img9.jpeg" alt="Foto 9" onclick="abrirGaleria(3)" class="galeria-thumb">
+      <img src="img/img10.jpeg" alt="Foto 10" onclick="abrirGaleria(4)" class="galeria-thumb">
+      <img src="img/img11.jpeg" alt="Foto 11" onclick="abrirGaleria(5)" class="galeria-thumb">
+      <img src="img/img12.jpeg" alt="Foto 12" onclick="abrirGaleria(6)" class="galeria-thumb">
+      <img src="img/img13.jpeg" alt="Foto 13" onclick="abrirGaleria(7)" class="galeria-thumb">
+      <img src="img/img14.jpeg" alt="Foto 14" onclick="abrirGaleria(8)" class="galeria-thumb">
+      <img src="img/img15.jpeg" alt="Foto 15" onclick="abrirGaleria(9)" class="galeria-thumb">
+      <img src="img/img16.jpeg" alt="Foto 16" onclick="abrirGaleria(10)" class="galeria-thumb">
+      <img src="img/img17.jpeg" alt="Foto 17" onclick="abrirGaleria(11)" class="galeria-thumb">
+    </div>
+    
+  </div>
+
+  </main>
+  <script src="script.js"></script>
+  
+</body>
+</html>
