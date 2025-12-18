@@ -292,3 +292,50 @@ p {
     padding: 15px;
   }
 }
+.Mensagem { 
+  max-width: 600px; 
+  margin: 40px auto; 
+  padding: 20px; 
+  background-color: rgba(255, 255, 255, 0.1); 
+  border-radius: 15px; box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); 
+} /* Campo de input */ 
+input[type="text"] { 
+  width: 80%; 
+  padding: 12px; 
+  border: none; 
+  border-radius: 8px; 
+  margin-top: 10px;
+  margin-left: 3rem; 
+  font-size: 16px; 
+  background-color: #fff; 
+  color: #4b0082; 
+} /* Botão de salvar */ 
+.btnMensagem { 
+  margin-top: 15px; 
+  padding: 10px 20px; 
+  background-color: #ff69b4; 
+  border: none; 
+  border-radius: 8px; 
+  margin-left:14rem;
+  color: white; 
+  font-weight: bold; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+} 
+.btnMensagem:hover { 
+  background-color: #ff1493; 
+} /* Lista de mensagens */ 
+.listaMensagens ul { 
+  list-style-type: none; 
+  padding: 0; 
+  margin-top: 20px; 
+} 
+.listaMensagens li { 
+  background-color: rgba(255, 255, 255, 0.2); 
+  margin-bottom: 10px; 
+  padding: 10px; 
+  border-radius: 10px; 
+  font-style: italic; 
+  color: #fff; 
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); 
+}
