@@ -172,21 +172,10 @@ document.addEventListener('keydown', function(event) {
 });
 
 
-function SalvarMensagem(){ 
+const API_URL = "https://script.google.com/macros/s/AKfycbx4akundr090agOw7S1pLIC323bDRCRxE6LFX05_tfAmYNkf9jZz8Wz6N7bfkAJirQy/exec"
+ function SalvarMensagem() { 
     const mensagem = document.getElementById("MensagemCampo").value; 
-    const novaMensagem = mensagem.trim(); if(!novaMensagem) return; 
-    let mensagensList = JSON.parse(localStorage.getItem("MensagensSalvas")) || []; 
-    mensagensList.push(novaMensagem); 
-    localStorage.setItem("MensagensSalvas", JSON.stringify(mensagensList));
-    document.getElementById("MensagemCampo").value = ""; 
-    atualizarLista(); 
-} 
-function atualizarLista() { 
-    const mensagens = JSON.parse(localStorage.getItem("MensagensSalvas")) || []; 
-    const ul = document.getElementById("mensagensUl"); ul.innerHTML = ""; 
-    mensagens.forEach((msg) => { const li = document.createElement("li"); 
-        li.textContent = msg; ul.appendChild(li); 
-    });
- } // Atualiza a lista ao carregar a página window.onload = atualizarLista;
- window.onload = atualizarLista();
+    if (!mensagem.trim()) return; 
+    fetch(API_URL, { method: "POST", body: JSON.stringify({ mensagem: mensagem }) }).then(() => { document.getElementById("MensagemCampo").value = ""; atualizarLista(); }); } function atualizarLista() { fetch(API_URL) .then(res => res.json()) .then(data => { const ul = document.getElementById("mensagensUl"); ul.innerHTML = ""; data.forEach(item => { const li = document.createElement("li"); li.textContent = item.mensagem + " - " + item.data; ul.appendChild(li); }); }); } 
+window.onload = atualizarLista;
 // Atualiza a lista ao carregar a página window.onload = atualizarLista;
